@@ -1,6 +1,6 @@
 # main text of home
 name: Michael Goin
-bio: Junior at UTK studying Computer Science and Mathematics
+bio: Undergraduate at UTK studying Computer Science and Mathematics
 
 # twitter summary info
 description: Homepage of Michael Goin
@@ -46,7 +46,7 @@ email: mgoin@vols.utk.edu
 authors:
     michaelgoin:
         name: Michael Goin
-        bio: Junior at UTK studying Computer Science
+        bio: Undergraduate at UTK studying Computer Science
         external-image: false
         picture: assets/images/michael.jpg
         # twitter: Freddie_V4
