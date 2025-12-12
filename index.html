@@ -1,19 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Goin</title>
-  </head>
-  <body>
-    <h1>Michael&nbsp;Goin</h1>
-    <nav>
-      <ul>
-        <li><a href="https://github.com/mgoin">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/michael-goin/">LinkedIn</a></li>
-        <li><a href="https://huggingface.co/mgoin">Hugging&nbsp;Face</a></li>
-        <li><a href="https://scholar.google.com/citations?user=YfmwSv8AAAAJ&amp;hl=en">Google&nbsp;Scholar</a></li>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Michael Goin - Systems engineer focused on LLM inference performance">
+  <title>Michael Goin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="sim" aria-hidden="true"></canvas>
+
+  <main>
+    <header>
+      <div class="photo-container">
+        <img src="assets/me.jpg" alt="Michael Goin" class="photo" width="120" height="120">
+      </div>
+      <h1>Michael Goin @mgoin</h1>
+      <p class="tagline">systems engineer making inference fast</p>
+      <nav class="links">
+        <a href="https://github.com/mgoin">github</a>
+        <a href="https://x.com/mgoin_">twitter</a>
+        <a href="https://www.linkedin.com/in/michael-goin/">linkedin</a>
+        <a href="https://huggingface.co/mgoin">huggingface</a>
+        <a href="https://scholar.google.com/citations?user=YfmwSv8AAAAJ">scholar</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I've been working in ML inference since 2019, currently focused on making SOTA open-source LLMs run fast.
+      </p>
+      <p>
+        I like working across the stack wherever the bottleneck is - Python, PyTorch, Triton, C++, CUDA.
+        Most of my time goes into profiling, benchmarking, and figuring out why things are slow.
+      </p>
+      <p>
+        Currently at <a href="https://www.redhat.com">Red Hat</a> working on
+        <a href="https://github.com/vllm-project/vllm">vLLM</a> to power the open-source AI ecosystem with fast and easy
+        inference.
+        Previously at <a href="https://www.neuralmagic.com">Neural Magic</a>, where we worked on vLLM and originally
+        built a
+        <a href="https://github.com/neuralmagic/deepsparse">sparsity-aware inference compiler for CPUs</a>.
+      </p>
+      <p>
+        If you want to reach me, the best way is to ping me <code>@mgoin</code> on <a href="https://slack.vllm.ai">vLLM
+          Slack</a>. I'm always happy to collaborate on projects or ideas related to vLLM!
+      </p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+      <ul class="timeline">
+        <li>
+          <span class="date">2025-01 -> now</span>
+          <span class="role"><a href="https://www.redhat.com">Red Hat</a> (<a
+              href="https://www.redhat.com/en/about/press-releases/red-hat-acquire-neural-magic">acq Neural Magic</a>),
+            Principal Engineer</span>
+        </li>
+        <li>
+          <span class="date">2024-01 -> now</span>
+          <span class="role"><a href="https://github.com/vllm-project/vllm">vLLM</a>, Core Maintainer</span>
+        </li>
+        <li>
+          <span class="date">2019-09 -> 2024-12</span>
+          <span class="role"><a href="https://www.neuralmagic.com">Neural Magic</a>, Engineering Tech Lead</span>
+        </li>
       </ul>
-    </nav>
-  </body>
+    </section>
+
+    <section id="changelog">
+      <h2>Changelog</h2>
+      <p class="section-note">Things I've shipped or helped ship.</p>
+      <ul class="log">
+        <!-- Add new entries at the top -->
+        <li>
+          <span class="date">2025-10-09</span>
+          <span class="entry"><a href="https://blog.vllm.ai/2025/10/09/blackwell-inferencemax.html">vLLM + NVIDIA
+              Blackwell Optimized Inference</a></span>
+        </li>
+        <li>
+          <span class="date">2025-01-27</span>
+          <span class="entry"><a href="https://blog.vllm.ai/2025/01/27/v1-alpha-release.html">vLLM V1: A Major Upgrade
+              to vLLM's Core Architecture</a></span>
+        </li>
+        <li>
+          <span class="date">2025-01-14</span>
+          <span class="entry"><a href="https://blog.vllm.ai/2025/01/14/struct-decode-intro.html">Structured Decoding
+              Optimizations in vLLM</a></span>
+        </li>
+        <li>
+          <span class="date">2024-08-31</span>
+          <span class="entry">Accurate Compression of Text-to-Image Diffusion Models via Vector Quantization (<a
+              href="https://arxiv.org/abs/2409.00492">arXiv</a>)</span>
+        </li>
+        <li>
+          <span class="date">2024-06-20</span>
+          <span class="entry">Won a bounty converting nvidia/Nemotron-4-340B-Instruct to work with vLLM (<a
+              href="https://x.com/natolambert/status/1814735390877884823">twitter</a>)</span>
+        </li>
+        <li>
+          <span class="date">2024-05-06</span>
+          <span class="entry">Enabling High-Sparsity Foundational Llama Models with Efficient Pretraining and
+            Deployment (<a href="https://arxiv.org/abs/2405.03594">arXiv</a>)</span>
+        </li>
+        <li>
+          <span class="date">2023-10-10</span>
+          <span class="entry">Sparse Fine-tuning for LLM Inference Acceleration (<a
+              href="https://arxiv.org/abs/2310.06927">arXiv</a>)</span>
+        </li>
+        <li>
+          <span class="date">2023-10-10</span>
+          <span class="entry">The Optimal BERT Surgeon: Scalable and Accurate Second-Order Pruning for Large
+            Language Models (<a href="https://arxiv.org/abs/2203.07259">arXiv</a>)</span>
+        </li>
+        <!-- Add more entries here -->
+      </ul>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <ul class="talks-list">
+        <!-- Add more entries here -->
+        <li>
+          <span class="date">2024 -> now</span>
+          <span class="entry"><a href="https://www.youtube.com/playlist?list=PLbMP1JcGBmSHxp4-lubU5WYmJ9YgAQcf3">vLLM
+              Office Hours</a>, ~bi-weekly vLLM update I host with guests from the community. Slides are available in
+            each video's description.</span>
+        </li>
+        <li>
+          <span class="date">2025-11-06</span>
+          <span class="entry"><a href="https://luma.com/0gls27kb">vLLM Zurich Meetup</a>,
+            <a
+              href="https://docs.google.com/presentation/d/1UC9PTLCHYXQpOmJDSFg6Sljra3iVXzc09DeEI7dnxMc/edit?usp=sharing">Slides</a>,
+            <a href="https://www.youtube.com/watch?v=6m6ZE6yVEDI">Recording</a></span>
+        </li>
+        <li>
+          <span class="date">2025-11-01</span>
+          <span class="entry"><a href="https://mp.weixin.qq.com/s/xSrYXjNgr1HbCP4ExYNG1w">vLLM Beijing Meetup</a>, <a
+              href="https://drive.google.com/drive/folders/1nQJ8ZkLSjKxvu36sSHaceVXtttbLvvu-?usp=drive_link">Slides</a></span>
+        </li>
+        <li>
+          <span class="date">2025-10-21</span>
+          <span class="entry"><a href="https://openagentsummit2025.sched.com/event/28zVb">PyTorch Conf 2025 -
+              Accelerating Open-Source RL
+              and Agentic Inference with vLLM</a>, <a
+              href="https://docs.google.com/presentation/d/1HzuszVupkE5tzVKYe2IvOBwz02YMnKcUuHm19vUR2SI/edit?usp=sharing">Slides</a>,
+            <a href="https://youtu.be/AZcJJbBBgLc">Recording</a></span>
+        </li>
+        <li>
+          <span class="date">2025-10-09</span>
+          <span class="entry"><a href="https://luma.com/0zuf1wp5">vLLM Tokyo Meetup</a>, <a
+              href="https://drive.google.com/file/d/1bcrrAE1rxUgx0mjIeOWT6hNe2RefC5Hm/view">Slides</a></span>
+        </li>
+        <li>
+          <span class="date">2025-09-18</span>
+          <span class="entry"><a href="https://luma.com/vjfelimw">vLLM Boston Meetup</a>, <a
+              href="https://docs.google.com/presentation/d/1k3EBinP85fN7x2glLURCEMheT4FJufJOgYiBaL8ZwZI/edit?usp=sharing">Slides</a></span>
+        </li>
+        <li>
+          <span class="date">2025-05-07</span>
+          <span class="entry"><a href="https://lu.ma/c1rqyf1f">NYC vLLM Meetup</a>, <a
+              href="https://docs.google.com/presentation/d/1_q_aW_ioMJWUImf1s1YM-ZhjXz8cUeL0IJvaquOYBeA/edit?usp=sharing">Slides</a></span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Boston, MA</p>
+      <p class="b" title="B says hi">B</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
