@@ -14,13 +14,21 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not(.dark) {
     --bg: #fafafa;
     --fg: #1a1a1a;
     --fg-dim: #6b6b6b;
     --accent: #059669;
     --accent-dim: #047857;
   }
+}
+
+:root.light {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --fg-dim: #6b6b6b;
+  --accent: #059669;
+  --accent-dim: #047857;
 }
 
 html {
@@ -56,6 +64,74 @@ body {
 @media (prefers-reduced-motion: reduce) {
   #sim {
     display: none;
+  }
+}
+
+/* Theme toggle */
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  background: var(--bg);
+  border: 1px solid var(--fg-dim);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg-dim);
+  transition: color 0.2s ease, border-color 0.2s ease;
+  opacity: 0.7;
+}
+
+.theme-toggle:hover {
+  color: var(--fg);
+  border-color: var(--fg);
+  opacity: 1;
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+/* Dark mode: show sun (to switch to light) */
+.theme-toggle .icon-sun {
+  opacity: 1;
+}
+.theme-toggle .icon-moon {
+  opacity: 0;
+}
+
+/* Light mode: show moon (to switch to dark) */
+:root.light .theme-toggle .icon-sun,
+:root:not(.dark) .theme-toggle .icon-sun {
+  opacity: 0;
+}
+:root.light .theme-toggle .icon-moon,
+:root:not(.dark) .theme-toggle .icon-moon {
+  opacity: 1;
+}
+
+/* Override for explicit dark */
+:root.dark .theme-toggle .icon-sun {
+  opacity: 1;
+}
+:root.dark .theme-toggle .icon-moon {
+  opacity: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .theme-toggle .icon-sun {
+    opacity: 1;
+  }
+  :root:not(.light) .theme-toggle .icon-moon {
+    opacity: 0;
   }
 }
 
