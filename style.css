@@ -147,6 +147,21 @@ a {
   transition: color 0.15s ease;
 }
 
+code {
+  font-family: var(--font);
+  font-size: 0.85em;
+  background: rgba(127, 127, 127, 0.15);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--fg-dim);
+}
+
+h1 code {
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-left: 0.25em;
+}
+
 a:hover,
 a:focus {
   color: var(--accent-dim);
